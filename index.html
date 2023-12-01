@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Fruits and Legumes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <form>
+          <div class="form-row align-items-center">
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" id="itemInput" placeholder="Enter fruit or legume">
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="itemType" id="fruitRadio" value="fruit">
+              <label class="form-check-label" for="fruitRadio">Fruit</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="itemType" id="legumeRadio" value="legume">
+              <label class="form-check-label" for="legumeRadio">Legume</label>
+            </div>
+            <div class="form-group col-md-4 btn-container">
+              <button type="button" class="btn btn-primary" onclick="addToSpecificList()">Add to Specific</button>
+              <button type="button" class="btn btn-success" onclick="addToGeneralList()">Add to General</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- New Div -->
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div class="card">
+        <!-- Search Bar and Buttons -->
+        <div class="search-bar">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+                <!-- Trigger the popover with a button -->
+                <button type="button" class="btn btn-info"  onclick="searchItem()">Search for Item</button>
+                <span style="margin-right: 10px;"></span> <!-- Add some space between buttons and input -->
+                <button type="button" class="btn btn-danger" onclick="deleteItem()">Delete an Item</button>
+              </div>
+              <input type="text" class="form-control" id="searchInput" placeholder="Search for fruits or legumes">
+
+            </div>
+        </div>
+
+        <!-- Three Lists in the Same Row -->
+        <div class="row">
+          <!-- List of Fruits -->
+          <div class="col-md-4">
+            <div class="card list-container fruit">
+              <h3 class="text-center mb-3">List of Fruits</h3>
+              <ul id="fruitsList" class="list-group"></ul>
+            </div>
+          </div>
+
+          <!-- List of Fruits and Legumes -->
+          <div class="col-md-4">
+            <div class="card list-container general">
+              <h3 class="text-center mb-3">List of Fruits & Legumes</h3>
+              <ul id="fruitsAndLegumesList" class="list-group"></ul>
+            </div>
+          </div>
+
+          <!-- List of Legumes -->
+          <div class="col-md-4">
+            <div class="card list-container legume">
+              <h3 class="text-center mb-3">List of Legumes</h3>
+              <ul id="legumesList" class="list-group"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

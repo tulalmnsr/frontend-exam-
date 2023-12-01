@@ -1,0 +1,121 @@
+
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 80%; /* Adjust the width as needed */
+      margin: 0 auto; /* Center the card */
+      margin-bottom: 20px; /* Add margin at the bottom */
+      transition: transform 0.2s ease-in-out; /* Add transition effect */
+    }
+
+    .card:hover {
+      transform: scale(1.05); /* Scale up on hover */
+    }
+
+    .btn-primary,
+    .btn-success,
+    .btn-info,
+    .btn-danger {
+      font-size: 16px;
+      white-space: nowrap;
+      transition: transform 0.2s ease-in-out; /* Add transition effect */
+    }
+
+    .btn-primary:hover,
+    .btn-success:hover,
+    .btn-info:hover,
+    .btn-danger:hover {
+      background-color: #0056b3;
+      transform: scale(1.05); /* Scale up on hover */
+    }
+
+    .form-control {
+      border-radius: 8px;
+      width: 300px; /* Adjust the width as needed */
+      transition: transform 0.2s ease-in-out; /* Add transition effect */
+    }
+
+    .form-control:hover {
+      transform: scale(1.05); /* Scale up on hover */
+    }
+
+    .form-check {
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.2s ease-in-out; /* Add transition effect */
+      margin-left: 25px;
+    }
+
+    .form-check:hover {
+      transform: scale(1.1); /* Scale up on hover */
+    }
+
+    .btn-container {
+      text-align: right;
+      margin-left: 80px;
+      margin-top: 10px;
+      transition: transform 0.2s ease-in-out; /* Add transition effect */
+    }
+
+    .btn-container:hover {
+      transform: scale(1.05); /* Scale up on hover */
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      transition: transform 0.2s ease-in-out; /* Add transition effect */
+      margin-left: 10px;
+    }
+
+
+    .search-bar:hover {
+      transform: scale(1.05); /* Scale up on hover */
+    }
+
+    .list-container {
+      margin-top: 20px;
+      transition: transform 0.2s ease-in-out; /* Add transition effect */
+    }
+
+    .list-container:hover {
+      transform: scale(1.05); /* Scale up on hover */
+    }
+
+    .list-container h3 {
+      font-size: 18px; /* Adjust the font size as needed */
+    }
+
+    .list-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .list-container li {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+      margin-bottom: 8px;
+      transition: transform 0.2s ease-in-out; /* Add transition effect */
+    }
+
+    .list-container li:hover {
+      transform: scale(1.05); /* Scale up on hover */
+    }
+
+    /* Added styles for colors */
+    .list-container.fruit li {
+      color: #FF0000; /* Red */
+    }
+
+    .list-container.legume li {
+      color: #008000; /* Green */
+    }
+
+    .list-container.general li {
+      color: #0000FF; /* Blue */
+    }
+ 
