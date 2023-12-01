@@ -141,4 +141,31 @@
     }
   }
 
+  $(document).ready(function () {
+    $('[data-toggle="popover"]').popover({
+      html: true,
+    });
+  
+    // Event delegation for the click on the container of lists
+    $('.list-container.general').on('click', 'li', function () {
+      moveItemToSpecificList(this);
+    });
+  });
+  
+  function moveItemToSpecificList(item) {
+    var inputText = item.textContent.split(' - ')[1];
+    var itemType = item.classList.contains('fruit') ? 'fruit' : 'legume';
+  
+    // Remove the item from the general list
+    item.remove();
+  
+    // Add the item to the specific list
+    var listContainer = document.getElementById(itemType + 'sList');
+    var listItem = document.createElement('li');
+    listItem.textContent = itemType.charAt(0).toUpperCase() + itemType.slice(1) + '! - ' + inputText;
+    listContainer.appendChild(listItem);
+  
+    // Set the color based on the item type
+    listItem.classList.add(itemType);
+  }
   
